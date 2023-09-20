@@ -4,26 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio</title>
-    <script src="main.js" type="module" defer></script>
+    <script src="index.js" type="module" defer></script>
 </head>
 <body>
     <form>
-        <input type="number" required name="cantidad"  placeholder="Ingrese la cantidad que desee"><br>
+        <label>Servicios</label><br>
+        <input type="number" required name="servicios"  placeholder="Ingrese la cantidad que desee"><br>
 
-        <input type="radio" name="opciiones" value="ingreso" checked><label>Ingreso</label>
+        <label>Telecomunicaciones</label><br>
+        <input type="number" required name="telecomunicaciones"  placeholder="Ingrese la cantidad que desee"><br>
 
-        <input type="radio" name="opciones" value="egreso"><label>Egreso</label><br>
+        <label>Comida</label><br>
+        <input type="number" required name="comida"  placeholder="Ingrese la cantidad que desee"><br>
+
+        <label>Ocio</label><br>
+        <input type="number" required name="ocio"  placeholder="Ingrese la cantidad que desee"><br>
+
+        <label>Transporte</label><br>
+        <input type="number" required name="transporte"  placeholder="Ingrese la cantidad que desee"><br>
+
+        <label>Seguros</label><br>
+        <input type="number" required name="seguros"  placeholder="Ingrese la cantidad que desee"><br>
+
+        <label>Vivienda</label><br>
+        <input type="number" required name="vivienda"  placeholder="Ingrese la cantidad que desee"><br>
 
         <input type="submit" value="enviar">
     </form>
     <table border="solid"> 
         <thead>
-            <th>#</th>
-            <th>Valor</th>
-            <th>Tipo</th>
+            <td>#</td>
+            <td>Servicios</td>
+            <td>Telecomunicaciones</td>
+            <td>Comida</td>
+            <td>Ocio</td>
+            <td>Transporte</td>
+            <td>Seguros</td>
+            <td>Vivienda</td>
+            <td>Opciones</td>
         </thead>
         <tbody id="myData">
-
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td><button name="actualizar">Actualizar</button><button name="eliminar">Eliminar</button></td>
         </tbody>
     </table>
 </body>
