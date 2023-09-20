@@ -8,39 +8,20 @@
 </head>
 <body>
     <form>
-        <label>Servicios</label><br>
-        <input type="number" required name="servicios"  placeholder="Ingrese la cantidad que desee"><br>
+        <label>Ingrese sus ingresos</label><br>
+        <input type="number" required name="cantidad"  placeholder="Ingrese la cantidad que desee"><br>
 
-        <label>Telecomunicaciones</label><br>
-        <input type="number" required name="telecomunicaciones"  placeholder="Ingrese la cantidad que desee"><br>
-
-        <label>Comida</label><br>
-        <input type="number" required name="comida"  placeholder="Ingrese la cantidad que desee"><br>
-
-        <label>Ocio</label><br>
-        <input type="number" required name="ocio"  placeholder="Ingrese la cantidad que desee"><br>
-
-        <label>Transporte</label><br>
-        <input type="number" required name="transporte"  placeholder="Ingrese la cantidad que desee"><br>
-
-        <label>Seguros</label><br>
-        <input type="number" required name="seguros"  placeholder="Ingrese la cantidad que desee"><br>
-
-        <label>Vivienda</label><br>
-        <input type="number" required name="vivienda"  placeholder="Ingrese la cantidad que desee"><br>
+        <input type="radio" required name="botones"><label>Egresos</label><br>
+        
+        <input type="radio" required name="botones"><label>Ingresos</label><br>
 
         <input type="submit" value="enviar">
     </form>
     <table border="solid"> 
         <thead>
             <td>#</td>
-            <td>Servicios</td>
-            <td>Telecomunicaciones</td>
-            <td>Comida</td>
-            <td>Ocio</td>
-            <td>Transporte</td>
-            <td>Seguros</td>
-            <td>Vivienda</td>
+            <td>Valor</td>
+            <td>Tipo</td>
             <td>Opciones</td>
             
         </thead>

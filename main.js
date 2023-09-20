@@ -6,20 +6,15 @@ addEventListener("DOMContentLoaded",async()=>{
         myTabla.insertAdjacentHTML("beforeend", `
         <tr>
             <td>${res[i].id}</td>
-            <td>${res[i].servicios}</td>
-            <td>${res[i].telecomunicaciones}</td>
-            <td>${res[i].comida}</td>
-            <td>${res[i].ocio}</td>
-            <td>${res[i].transporte}</td>
-            <td>${res[i].seguros}</td>
-            <td>${res[i].vivienda}</td>
+            <td>${res[i].cantidad}</td>
+            <td>${res[i].botones}</td>
             <td>${res[i].opciones}<input type="button" name="boton1" value="actualizar"><input type="button" name="botones" value="eliminar"></td>
         </tr>
     `);
     }
 })
 
-/*
+/
 myForm.addEvenListener('submit', async(e)=> {
     e.preventDefault();
 
@@ -35,5 +30,4 @@ myForm.addEvenListener('submit', async(e)=> {
     
     console.log(res);
 
-
-})*/
+})
