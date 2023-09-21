@@ -3,33 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="main.js" type="module" defer></script>
+    <title>Nomina</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" type="module" defer ></script>
 </head>
 <body>
-
-    <h2><center>Tabla de nómina</center></h2>
-    <form>
-        <label>Ingrese su valor</label><br>
-        <input type="number" required name="cantidad"  placeholder="Ingrese la cantidad que desee"><br>
-
-        <input type="radio" required name="botones" checked><label>Egresos</label><br>
-        
-        <input type="radio" required name="botones"><label>Ingresos</label><br>
-
-        <input type="submit" value="enviar">
+    <h2>Tabla de nómina</h2>
+    <form action="">
+        <input type="number" name="valor" required placeholder="Ingresa tu valor"><br>
+        <input type="radio" name="caja" checked value="ingreso"><label>Ingreso</label>
+        <input type="radio" name="caja" value="egreso"><label>Egreso</label><br>
+        <input type="submit" value="Guardar">
     </form>
-    <table border="solid"> 
+
+    <table border="solid">
         <thead>
-            <td>#</td>
-            <td>Valor</td>
-            <td>Tipo</td>
-            <td>Opciones</td>
-            
+            <tr>
+                <th>#</th>
+                <th>Valor</th>
+                <th>Tipo</th>
+            </tr>
         </thead>
         <tbody id="myData">
-            
         </tbody>
     </table>
 </body>
 </html>
+
