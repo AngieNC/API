@@ -14,7 +14,7 @@ const principalEliminar = async(id)=>{
         headers: {"content-type":"application/json"}
     };
     let res = await (await fetch(url + "/" + id, config)).json();
-
+    location.reload();
 };
 
 // Para que funcione el metodo editar
@@ -32,8 +32,10 @@ const principalEditar = async(id)=>{
         let res = fetch(url + "/" + id, config);
 
         dialog.close();
+        location.reload();
     })
-}
+    
+};
 
 //Todo esto es el evento que se desarrolla después de presionar 'ENVIAR'
 
@@ -76,14 +78,13 @@ document.addEventListener("DOMContentLoaded", async(e)=>{
         `)
     });
 
-    const eliminar = document.querySelector('.delet');
+    const eliminar = document.querySelectorAll('.delet');
     
-    const editar = document.querySelector('.edit');
+    const editar = document.querySelectorAll('.edit');
     
     //Evento eliminar
     eliminar.forEach((elemento) =>{
         elemento.addEventListener("click",()=>{
-            // console.log(typeof element.id)
             principalEliminar(elemento.id);
         })
     });
@@ -94,6 +95,6 @@ document.addEventListener("DOMContentLoaded", async(e)=>{
         elemento.addEventListener("click",(event)=>{
             dialog.showModal();
             principalEditar(elemento.id);
-        })
+        });
     });
 });
