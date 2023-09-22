@@ -11,7 +11,7 @@ Se realiza este proyecto para consumir una API de una base de datos que se almac
 
 #### Resultado:
 
-[![](/home/Exegol-161/Pictures/Screenshots/pagina.png)
+![](pagina.png)
 
 ##### Autora
 
