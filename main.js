@@ -14,13 +14,13 @@ const principalEliminar = async(id)=>{
         headers: {"content-type":"application/json"}
     };
     let res = await (await fetch(url + "/" + id, config)).json();
-    location.reload();
+    location.reload(); //Para que cargue ahí mismo
 };
 
 // Para que funcione el metodo editar
 
-const principalEditar = async(id)=>{
-    formu.addEventListener('submit', (e)=>{
+const principalEditar = async(id)=>{  //El asincronico hace que cargue primero todo el archivo y despues lo muestra
+    formu.addEventListener('submit', async(e)=>{
         e.preventDefault();
         let dato = Object.fromEntries(new FormData(e.target));
 
@@ -29,20 +29,20 @@ const principalEditar = async(id)=>{
             headers: {"content-type":"application/json"},
             body: JSON.stringify(dato)
         };
-        let res = fetch(url + "/" + id, config);
+        let res = await fetch(url + "/" + id, config);
 
         dialog.close();
         location.reload();
-    })
+    });
     
 };
 
-//Todo esto es el evento que se desarrolla después de presionar 'ENVIAR'
+// Todo esto es el evento que se desarrolla después de presionar 'ENVIAR'
 
 formulario.addEventListener("submit", async(e)=>{
     e.preventDefault();
     
-    let dato = Object.fromEntries(new FormData(e.target));
+    let dato = Object.fromEntries(new FormData(e.target )); //Crea un array para guardar los datos y el target hace que la información se quede en la misma pestaña
     
     const peticion = await (await fetch(url)).json();
 
@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", async(e)=>{
                 <button id="${elemento.id}" class="delet">Eliminar</button>
             </td>
         </tr>
-        `)
+        `);
     });
 
     const eliminar = document.querySelectorAll('.delet');
@@ -86,14 +86,14 @@ document.addEventListener("DOMContentLoaded", async(e)=>{
     eliminar.forEach((elemento) =>{
         elemento.addEventListener("click",()=>{
             principalEliminar(elemento.id);
-        })
+        });
     });
 
     //Evento editar
 
     editar.forEach((elemento)=>{
         elemento.addEventListener("click",(event)=>{
-            dialog.showModal();
+            dialog.showModal(); 
             principalEditar(elemento.id);
         });
     });
