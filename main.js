@@ -2,7 +2,7 @@
 // Se declaran las constantes para trabajar con los formularios y la base de datos
 const formulario = document.querySelector("#formAdd");
 const formu = document.querySelector("#formEdit");
-const dialog = document.querySelector("dialog");
+const dialog = document.querySelector ("dialog");
 const url = "https://6509e7ebf6553137159c3aee.mockapi.io/Nomina";
 
 
