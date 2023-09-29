@@ -34,7 +34,8 @@ h2{
     cursor: pointer;
     font-size: 20px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: rgb(59, 58, 58);
+    color: rgb(39, 35, 35);
+
 }
 
 table{
@@ -42,7 +43,7 @@ table{
     border-radius: 20px;
     width: 500px;
     text-align: center;
-    
+    box-shadow: -2px 8px 167px 24px rgba(0,0,0,0.75);
 }
 table thead{
     
@@ -59,7 +60,7 @@ table tbody{
 }
 
 .edit{
-    width: 80px;
+    width: 85px;
     height: 40px;
     border: none;
     background-color: rgb(166, 159, 227);
@@ -71,7 +72,7 @@ table tbody{
 }
 
 .delet{
-    width: 80px;
+    width: 87px;
     height: 40px;
     border: none;
     background-color: rgb(166, 159, 227);
