@@ -20,6 +20,11 @@ h2{
     border: none;
 }
 
+#ingresoo, #egresoo{
+    font-size: 28px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 #caja{
     font-size: 25px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -43,7 +48,7 @@ table{
     border-radius: 20px;
     width: 500px;
     text-align: center;
-    box-shadow: -2px 8px 167px 24px rgba(0,0,0,0.75);
+    box-shadow: -2px 7px 37px 6px rgba(0,0,0,0.75);
 }
 table thead{
     
@@ -76,6 +81,24 @@ table tbody{
     height: 40px;
     border: none;
     background-color: rgb(166, 159, 227);
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 17px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(42, 40, 40);
+}
+
+dialog{
+    border: none;
+    border-radius: 20px;
+    box-shadow: -2px 7px 50px 800px rgba(0,0,0,0.75);
+}
+
+.envio_editar{
+    width: 87px;
+    height: 40px;
+    border: none;
+    background-color: rgb(240, 130, 130);
     border-radius: 20px;
     cursor: pointer;
     font-size: 17px;
